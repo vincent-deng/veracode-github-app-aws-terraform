@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  terraform:
+    # stdin_open: true
+    # tty: true
+    image: hashicorp/terraform:latest
+    volumes:
+      - .:/infra
+    working_dir: /infra
+    environment:
+      - AWS_ACCESS_KEY_ID=AKIATP34Z4VLNQIGJZ5M
+      - AWS_SECRET_ACCESS_KEY=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
+      # - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
